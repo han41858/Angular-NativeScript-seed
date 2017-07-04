@@ -8,7 +8,7 @@
 android {
   defaultConfig {
     generatedDensities = []
-    applicationId = "com.github.han41858.angular-nativescript-seed"
+    applicationId = "github.han41858.AngularNativescriptSeed"
   }
   aaptOptions {
     additionalParameters "--no-version-vectors"
