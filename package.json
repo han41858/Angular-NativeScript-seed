@@ -22,7 +22,7 @@
 		"postrun:android": "cd ..",
 		"start:android": "nodemon --exec yarn run:android -w src/client/common -w src/client/ns --delay 100ms",
 		"prebuild:android": "yarn copyNativeScriptSrc&rimraf ./dist/android&mkdirp ./dist/android",
-		"build:android": "cd nativescript&tns build android --copy-to ../dist/android/pickhaso.apk",
+		"build:android": "cd nativescript&tns build android --copy-to ../dist/android/build.apk",
 		"postbuild:android": "cd .."
 	},
 	"private": true,
