@@ -1,5 +1,5 @@
 # Angular-NativeScript-seed
-![logo](https://github.com/han41858/Angular-NativeScript-seed/blob/master/logo.png)
+![logo](https://github.com/han41858/Angular-NativeScript-seed/blob/master/images/logo.png)
 
 Angular와 NativeScript를 사용해서 웹과 네이티브 앱을 동시에 개발하는 프로젝트입니다.
  
@@ -35,6 +35,8 @@ Angular 컴포넌트는 src/client/ng에서, NativeScript 컴포넌트는 src/cl
 ## 스크립트 사용 방법
 
 ### 웹 (Angular)
+![logo](https://github.com/han41858/Angular-NativeScript-seed/blob/master/images/web.png)
+
 웹은 Angular CLI로 생성했기 때문에 ng 명령을 그대로 랩핑해서 제공합니다.
 
 - `start:web` : 프론트엔드 Angular 애플리케이션 실행 (ng serve)
@@ -43,11 +45,15 @@ Angular 컴포넌트는 src/client/ng에서, NativeScript 컴포넌트는 src/cl
 - `lint:web` : (ng lint)
 
 ### 서버 (Express)
+![logo](https://github.com/han41858/Angular-NativeScript-seed/blob/master/images/express.png)
+
 웹 서버는 Express를 사용하며, Node.js 환경으로 동작합니다.
  
 - `start:server` : Express 서버 실행 
 
 ### 네이티브 앱 (NativeScript)
+![logo](https://github.com/han41858/Angular-NativeScript-seed/blob/master/images/android.png)
+
 네이티브 앱은 NativeScript로 구현하며, 안드로이드만 동작 확인했습니다.
 에뮬레이터를 실행하기 위해 Android Studio와 Java JDK를 설치해야 합니다.
 
