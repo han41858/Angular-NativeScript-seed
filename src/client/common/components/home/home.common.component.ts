@@ -1,12 +1,12 @@
 import { Router } from '@angular/router';
 
-export class AboutComponent {
+export class HomeCommonComponent {
 	constructor (protected router : Router) {
-		console.log('AboutComponent.constructor()');
+		console.log('HomeCommonComponent.constructor()');
 	}
 
 	navigate (dest : string) {
-		console.log('AboutComponent.navigate()', dest);
+		console.log('HomeCommonComponent.navigate()', dest);
 
 		this.router.navigate([dest]);
 	}

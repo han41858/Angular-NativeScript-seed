@@ -1,4 +1,4 @@
-import { HomeComponent } from '../../../common/components/home/home.component';
+import { HomeCommonComponent } from '../../../../common/components/home/home.common.component';
 
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 		<button (click)="navigate('/about')">to /about</button>
 	`
 })
-export class HomeComponentNg extends HomeComponent {
+export class HomeComponent extends HomeCommonComponent {
 	constructor (protected router : Router) {
 		super(router);
-		console.log('HomeComponentNg.constructor()');
+		console.log('HomeComponent.constructor()');
 	}
 }

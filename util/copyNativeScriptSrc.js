@@ -46,9 +46,10 @@ const ncpAsync = async (src, dest, transformFnc) => {
 
 	// make source root folder to copy common files
 	await mkdirpAsync('./nativescript/app');
+	await mkdirpAsync('./nativescript/app/app');
 
 	// copy common files
-	await ncpAsync('./src/client/common', './nativescript/app/common');
+	await ncpAsync('./src/client/common', './nativescript/app/app/common');
 
 	// copy NativeScript source files
 	await ncpAsync('./src/client/ns', './nativescript/app', (read, write) => {
@@ -63,8 +64,8 @@ const ncpAsync = async (src, dest, transformFnc) => {
 
 				// change path of common files
 				const result = data.replace(
-					/from '..\/..\/..\/common\/components\//g,
-					"from '../../common/components/"
+					/..\/..\/..\/common\//g,
+					'../common/'
 				);
 
 				fs.writeFile(write.path, result, 'utf8', (err) => {

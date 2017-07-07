@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
 
-import { HomeComponentNs } from './components/home/home.component.ns';
-import { AboutComponentNs } from './components/about/about.component.ns';
+import { HomeNsComponent } from './app/components/home/home.ns.component';
+import { AboutNsComponent } from './app/components/about/about.ns.component';
 
 export const routes : Routes = [
-	{ path : '', component : HomeComponentNs },
-	{ path : 'about', component : AboutComponentNs }
+	{ path : '', component : HomeNsComponent },
+	{ path : 'about', component : AboutNsComponent }
 ];

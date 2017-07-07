@@ -1,4 +1,4 @@
-import { AboutComponent } from '../../../common/components/about/about.component';
+import { AboutCommonComponent } from '../../../../common/components/about/about.common.component';
 
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
@@ -12,10 +12,10 @@ import { Page } from 'ui/page';
 		</StackLayout>
 	`
 })
-export class AboutComponentNs extends AboutComponent {
+export class AboutNsComponent extends AboutCommonComponent {
 	constructor (protected router : Router, private page : Page) {
 		super(router);
-		console.log('AboutComponentNs.constructor()');
+		console.log('AboutNsComponent.constructor()');
 
 		page.actionBarHidden = true;
 	}

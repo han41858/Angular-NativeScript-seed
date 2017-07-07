@@ -1,4 +1,4 @@
-import { AboutComponent } from '../../../common/components/about/about.component';
+import { AboutCommonComponent } from '../../../../common/components/about/about.common.component';
 
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 		<button (click)="navigate('/')">to /</button>
 	`
 })
-export class AboutComponentNg extends AboutComponent {
+export class AboutComponent extends AboutCommonComponent {
 	constructor (protected router : Router) {
 		super(router);
-		console.log('AboutComponentNg.constructor()');
+		console.log('AboutComponent.constructor()');
 	}
 }

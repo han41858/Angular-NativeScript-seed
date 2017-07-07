@@ -2,11 +2,11 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
 import { NativeScriptRouterModule } from 'nativescript-angular/router';
 
-import { routes } from './routes';
+import { routes } from '../routes';
 
-import { AppComponentNs } from './components/app/app.component.ns';
-import { HomeComponentNs } from './components/home/home.component.ns';
-import { AboutComponentNs } from './components/about/about.component.ns';
+import { AppNsComponent } from './components/app.ns.component';
+import { HomeNsComponent } from './components/home/home.ns.component';
+import { AboutNsComponent } from './components/about/about.ns.component';
 
 @NgModule({
 	imports : [
@@ -15,12 +15,12 @@ import { AboutComponentNs } from './components/about/about.component.ns';
 		NativeScriptRouterModule.forRoot(routes)
 	],
 	declarations : [
-		AppComponentNs,
-		HomeComponentNs,
-		AboutComponentNs
+		AppNsComponent,
+		HomeNsComponent,
+		AboutNsComponent
 	],
 	providers : [],
-	bootstrap : [AppComponentNs],
+	bootstrap : [AppNsComponent],
 	schemas : [
 		NO_ERRORS_SCHEMA
 	]

@@ -1,4 +1,4 @@
-import { HomeComponent } from '../../../common/components/home/home.component';
+import { HomeCommonComponent } from '../../../../common/components/home/home.common.component';
 
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
@@ -12,10 +12,10 @@ import { Page } from 'ui/page';
 		</StackLayout>
 	`
 })
-export class HomeComponentNs extends HomeComponent {
+export class HomeNsComponent extends HomeCommonComponent {
 	constructor (protected router : Router, private page : Page) {
 		super(router);
-		console.log('HomeComponentNs.constructor()');
+		console.log('HomeNsComponent.constructor()');
 
 		page.actionBarHidden = true;
 	}
