@@ -65,6 +65,8 @@
 		"mkdirp": "^0.5.1",
 		"ncp": "^2.0.0",
 		"nodemon": "^1.11.0",
+		"pug": "^2.0.0-rc.2",
+		"pug-html-loader": "^1.1.5",
 		"rimraf": "^2.6.1",
 		"ts-node": "~3.1.0",
 		"tslint": "~5.4.3",

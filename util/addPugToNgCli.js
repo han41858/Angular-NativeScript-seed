@@ -8,7 +8,7 @@ const fs = require('fs');
 const filePath = 'node_modules/@angular/cli/models/webpack-configs/common.js';
 const config = fs.readFileSync(filePath).toString();
 
-const pugSetting = "{ test : /\.pug$/, loader : ['raw-loader', 'pug-html-loader'] }";
+const pugSetting = "{ test : /\.pug$/, loader : ['raw-loader', 'pug-html-loader'] },";
 
 if (config.indexOf(pugSetting) === -1) {
 	const targetStr = 'rules: [';

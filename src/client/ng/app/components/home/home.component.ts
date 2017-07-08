@@ -4,10 +4,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-	template : `
-		<p>home works!!</p>
-		<button (click)="navigate('/about')">to /about</button>
-	`
+	templateUrl : './home.component.pug',
+	styleUrls : ['./home.component.styl']
 })
 export class HomeComponent extends HomeCommonComponent {
 	constructor (protected router : Router) {
