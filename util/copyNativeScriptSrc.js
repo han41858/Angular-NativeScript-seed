@@ -53,32 +53,50 @@ const ncpAsync = async (src, dest, transformFnc) => {
 
 	// copy NativeScript source files
 	await ncpAsync('./src/client/ns', './nativescript/app', (read, write) => {
-		// modifying target is '.ts' file in 'components' folder
-		if ((read.path.indexOf('\\components\\') !== -1)
-			&& (read.path.indexOf('.ts') === (read.path.length - 3))) {
+		const pathArr = read.path.split('.');
+		const ext = pathArr[pathArr.length - 1].toLowerCase();
 
-			fs.readFile(read.path, 'utf8', (err, data) => {
-				if (err) {
-					throw err;
+		switch (ext) {
+			case 'ts':
+				// modifying target is '.ts' file in 'components' folder
+				if (read.path.indexOf('\\components\\') !== -1) {
+					fs.readFile(read.path, 'utf8', (err, data) => {
+						if (err) {
+							throw err;
+						}
+
+						// change path of common files
+						const result = data.replace(
+							/..\/..\/..\/common\//g,
+							'../common/'
+						)
+						// change component template file from .pug to .html
+						.replace(
+							/.component.pug/g,
+							'.component.html'
+						)
+						// change component style file from .styl to .css
+						.replace(
+							/.component.styl/g,
+							'.component.css'
+						);
+
+						fs.writeFile(write.path, result, 'utf8', (err) => {
+							if (err) {
+								throw err;
+							}
+
+							return null;
+						});
+					});
 				}
+				else {
+					read.pipe(write);
+				}
+				break;
 
-				// change path of common files
-				const result = data.replace(
-					/..\/..\/..\/common\//g,
-					'../common/'
-				);
-
-				fs.writeFile(write.path, result, 'utf8', (err) => {
-					if (err) {
-						throw err;
-					}
-
-					return null;
-				});
-			});
-		}
-		else {
-			read.pipe(write);
+			default:
+				read.pipe(write);
 		}
 	});
 })();

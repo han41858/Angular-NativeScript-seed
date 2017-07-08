@@ -18,7 +18,7 @@
 		"preclean:android": "yarn copyNativeScriptSrc",
 		"clean:android": "cd nativescript&tns platform remove android&tns platform add android",
 		"prerun:android": "yarn copyNativeScriptSrc",
-		"run:android": "cd nativescript&tns run android --clean --verbose",
+		"run:android": "cd nativescript&tns run android",
 		"postrun:android": "cd ..",
 		"start:android": "nodemon --exec yarn run:android -w src/client/common -w src/client/ns --delay 100ms",
 		"prebuild:android": "yarn copyNativeScriptSrc&rimraf ./dist/android&mkdirp ./dist/android",
