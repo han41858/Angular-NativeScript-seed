@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"license": "MIT",
 	"scripts": {
-		"postinstall": "cd nativescript&yarn install&cd ..",
+		"postinstall": "cd nativescript&yarn install&cd ..&node util/addPugToNgCli",
 		"ng": "ng",
 		"start:web": "ng serve",
 		"build:web": "ng build",
