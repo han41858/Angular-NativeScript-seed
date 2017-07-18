@@ -41,6 +41,7 @@ Angular 컴포넌트는 src/client/ng에서, NativeScript 컴포넌트는 src/cl
 
 - `start:web` : 프론트엔드 Angular 애플리케이션 실행 (ng serve)
 - `build:web` : (ng build)
+- `watch:web` : 프론트엔드 Angular 애플리케이션을 express static 폴더로 지정하고 워치 모드로 동작 (ng build --watch)
 - `test:web` : (ng test)
 - `lint:web` : (ng lint)
 
