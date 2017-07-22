@@ -5,8 +5,7 @@
 	"scripts": {
 		"postinstall": "cd nativescript&yarn install&cd ..&node util/addPugToNgCli",
 		"ng": "ng",
-		"start:web": "ng serve",
-		"watch:web": "ng build --watch",
+		"start:web": "ng serve --proxy-config proxy.conf.json",
 		"build:web": "ng build",
 		"test:web": "ng test",
 		"lint:web": "ng lint",
